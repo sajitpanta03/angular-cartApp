@@ -1,0 +1,9 @@
+.cartAdded {
+  display: flex;
+  background: rgba(245, 242, 242, 0.37);
+}
+
+.itemImage img {
+  height: 232px;
+  width: 180px;
+}

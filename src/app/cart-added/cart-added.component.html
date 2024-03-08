@@ -1,0 +1,24 @@
+@for (item of cartAddedService.getItems(); track item.id) {
+<div class="cartAdded">
+  <div class="itemImage">
+    <img [src]="item.image" alt="{{ item.name }}">
+  </div>
+  <div class="details">
+    <div class="itemName">
+      <p>{{ item.name }}</p>
+    </div>
+    <div class="itemPrice">
+      <p>${{ item.price }}</p>
+    </div>
+    <div class="itemQuantity">
+      <p>{{ item.quantity }}</p>
+    </div>
+    <div class="button">
+      <button type="submit" (click)="deleteFromCart(item)">delete</button>
+      <button type="submit" (click)="cartAddedService.decrementQuantity(item.id)">-</button>
+      <button type="submit" (click)="cartAddedService.incrementQuantity(item.id)">+</button>
+    </div>
+  </div>
+</div>
+{{ cartAddedService.getTotal()}}
+}
