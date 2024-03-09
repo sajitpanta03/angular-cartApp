@@ -208,3 +208,64 @@ section {
 .cartNumber span {
   text-decoration: none;
 }
+
+/* media query */
+
+/* tablet view */
+
+@media screen and (min-width: 768px) and (max-width: 1023px)  {
+
+  .cart {
+    padding: 70px 105px;
+  }
+
+  .belowCart {
+    height: 90px;
+    width: 285px;
+    text-align: center;
+  }
+
+  .detailCart {
+    font-size: 17px;
+  }
+
+  .addToCart {
+    margin-top: 13px;
+    margin-left: 43px;
+  }
+
+  .address-cart {
+    height: 40px;
+    width: 243px;
+  }
+
+}
+
+
+/* mobile view */
+
+@media screen and (max-width: 769px) {
+  .cart {
+    padding: 10px 35px;
+  }
+
+  .belowCart {
+    height: 90px;
+    width: 285px;
+    text-align: center;
+  }
+
+  .detailCart {
+    font-size: 13px;
+  }
+
+  .addToCart {
+    margin-top: 13px;
+    margin-left: 43px;
+  }
+
+  .address-cart {
+    height: 40px;
+    width: 243px;
+  }
+}

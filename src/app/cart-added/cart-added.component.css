@@ -1,3 +1,8 @@
+.cartContainer {
+  display: flex;
+  gap: 15px;
+}
+
 .cartAdded {
   display: flex;
   background: rgba(245, 242, 242, 0.37);

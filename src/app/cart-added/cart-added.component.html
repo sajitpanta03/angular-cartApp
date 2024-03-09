@@ -1,24 +1,31 @@
-@for (item of cartAddedService.getItems(); track item.id) {
-<div class="cartAdded">
-  <div class="itemImage">
-    <img [src]="item.image" alt="{{ item.name }}">
+@if (cartAddedService.getItems().length === 0) {
+  <h3>No cart selected</h3>
+}
+
+<div class="cartContainer">
+  @for (item of cartAddedService.getItems(); track item.id) {
+  <div class="cartAdded">
+    <div class="itemImage">
+      <img [src]="item.image" alt="{{ item.name }}">
+    </div>
+    <div class="details">
+      <div class="itemName">
+        <p>{{ item.name }}</p>
+      </div>
+      <div class="itemPrice">
+        <p>Price: ${{ item.price }}</p>
+      </div>
+      <div class="itemQuantity">
+        <p>Quantity: {{ item.quantity }}</p>
+      </div>
+      <div class="button">
+        <button type="submit" class="delete" (click)="deleteFromCart(item)">delete</button><br><br>
+        <button type="submit" class="btn" (click)="cartAddedService.incrementQuantity(item.id)">+</button>&nbsp;
+        <button type="submit" class="btn" (click)="cartAddedService.decrementQuantity(item.id)">-</button>
+      </div>
+    </div>
   </div>
-  <div class="details">
-    <div class="itemName">
-      <p>{{ item.name }}</p>
-    </div>
-    <div class="itemPrice">
-      <p>Price: ${{ item.price }}</p>
-    </div>
-    <div class="itemQuantity">
-      <p>Quantity: {{ item.quantity }}</p>
-    </div>
-    <div class="button">
-      <button type="submit" class="delete" (click)="deleteFromCart(item)">delete</button><br><br>
-      <button type="submit" class="btn" (click)="cartAddedService.decrementQuantity(item.id)">-</button>&nbsp;
-      <button type="submit" class="btn" (click)="cartAddedService.incrementQuantity(item.id)">+</button>
-    </div>
-  </div>
+}
 </div>
 
 <div class="checkoutContainer">
@@ -37,4 +44,3 @@
     </div>
   </div>
 </div>
-}
