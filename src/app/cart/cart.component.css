@@ -114,7 +114,8 @@ section {
 .plant {
   background-color: #e0f2d8;
   border-radius: 50px;
-  box-shadow: 0 0 0 7px #e0f2d8;
+  box-shadow: -1px 0px 8px 2px #e0f2d8;
+  margin-right: 6px;
 }
 
 .circle {
@@ -183,15 +184,27 @@ section {
   cursor: pointer;
 }
 
+.addToCart button:hover {
+  background: #bac2b7;
+}
+
 .cartIcon {
   cursor: pointer;
   position: relative;
 }
 
 .cartIcon:hover {
-  color: green;
+  background: #bac2b7;
+  border-radius: 3px;
+
 }
 
 .cartNumber {
   color: #527e3f;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.cartNumber span {
+  text-decoration: none;
 }

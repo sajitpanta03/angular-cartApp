@@ -19,9 +19,12 @@ export class CartAddedService {
     }
   }
 
-
   getItems() {
     return this.items;
+  }
+
+  getQuantityNumber() {
+    return this.items.reduce((acc, item) => acc + item.quantity, 0);
   }
 
   getItemNumber() {

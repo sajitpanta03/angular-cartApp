@@ -1,9 +1,53 @@
 .cartAdded {
   display: flex;
   background: rgba(245, 242, 242, 0.37);
+  height: 300px;
+  width: 435px;
 }
 
 .itemImage img {
   height: 232px;
   width: 180px;
+}
+
+.details {
+  margin-top: 50px;
+}
+
+.button .delete {
+  color: white;
+  background-color: rgb(145, 25, 25);
+  border: none;
+  border-radius: 50px;
+  padding: 8px 16px;
+}
+
+.button .btn {
+  padding: 1px 12px;
+  border: none;
+}
+
+.checkoutContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.checkout {
+  background: rgba(245, 242, 242, 0.37);
+  height: 300px;
+  width: 435px;
+  display: grid;
+  margin-top: 300px;
+}
+
+.checkout div {
+  text-align: center;
+}
+
+.checkout button {
+  border: none;
+  padding: 10px 20px;
+  background: #0e550e;
+  color: white;
+  border-radius: 5px;
 }

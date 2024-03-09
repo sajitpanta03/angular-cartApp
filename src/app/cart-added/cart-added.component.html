@@ -8,17 +8,33 @@
       <p>{{ item.name }}</p>
     </div>
     <div class="itemPrice">
-      <p>${{ item.price }}</p>
+      <p>Price: ${{ item.price }}</p>
     </div>
     <div class="itemQuantity">
-      <p>{{ item.quantity }}</p>
+      <p>Quantity: {{ item.quantity }}</p>
     </div>
     <div class="button">
-      <button type="submit" (click)="deleteFromCart(item)">delete</button>
-      <button type="submit" (click)="cartAddedService.decrementQuantity(item.id)">-</button>
-      <button type="submit" (click)="cartAddedService.incrementQuantity(item.id)">+</button>
+      <button type="submit" class="delete" (click)="deleteFromCart(item)">delete</button><br><br>
+      <button type="submit" class="btn" (click)="cartAddedService.decrementQuantity(item.id)">-</button>&nbsp;
+      <button type="submit" class="btn" (click)="cartAddedService.incrementQuantity(item.id)">+</button>
     </div>
   </div>
 </div>
-{{ cartAddedService.getTotal()}}
+
+<div class="checkoutContainer">
+  <div class="checkout">
+    <div>
+      Total Item:{{ cartAddedService.getItemNumber() }}
+    </div>
+    <div>
+      Total Quantity: {{ cartAddedService.getQuantityNumber() }}
+    </div>
+    <div>
+      Total Price: {{ cartAddedService.getTotal()}}
+    </div>
+    <div class="btn">
+      <button type="submit">Checkout</button>
+    </div>
+  </div>
+</div>
 }

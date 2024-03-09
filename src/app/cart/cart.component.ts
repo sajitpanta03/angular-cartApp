@@ -19,7 +19,7 @@ export class CartComponent {
       image: 'assets/images/pngegg.png',
       name: 'Monestera Deliciosa',
       price: 244
-    }
+    },
   ]
 
   addToCart(product: any) {
